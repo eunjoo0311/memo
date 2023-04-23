@@ -4,13 +4,15 @@ const list = document.getElementById("list");
 const delBtn = document.getElementById("delBtn");
 
 addBtn.addEventListener("click", function (event) {
-  const memoList = document.createElement("li");
+  const memoList = document.createElement("div");
   memoList.innerHTML = textarea.value;
-  memoList.innerHTML += "<button id='delBtn' type='button'>삭제</button>";
+  memoList.innerHTML += `<button id='delBtn' type='button' >삭제</button>`;
   list.appendChild(memoList);
   textarea.value = "";
-});
 
-delBtn.addEventListener("click", function (event) {
-  list.removeChild(""); /// js 했던거 찾아보기
+  list.addEventListener("click", function (event) {
+    if (event.target.id === "delBtn") {
+      event.target.parentNode.remove();
+    }
+  });
 });

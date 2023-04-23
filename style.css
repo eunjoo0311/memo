@@ -9,3 +9,24 @@ section {
   margin: 20px auto;
   width: 500px;
 }
+
+ul {
+  padding: initial;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  margin: 10px auto;
+  background-color: seagreen;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow-wrap: normal;
+}
+div button {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: inherit;
+}
