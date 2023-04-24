@@ -1,9 +1,29 @@
+@font-face {
+  font-family: "Cafe24Shiningstar";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #e0e0e0;
+  font-family: "Cafe24Shiningstar";
+}
+
 header,
 section {
   display: flex;
   justify-content: center;
 }
 
+textarea {
+  font-size: 20px;
+  background-color: #d1bcb7;
+  border: none;
+  box-shadow: 5px 5px 10px rgb(143, 143, 143);
+  padding: 20px;
+  outline: none;
+}
 section {
   flex-direction: column;
   margin: 20px auto;
@@ -17,16 +37,30 @@ ul {
 }
 
 div {
-  margin: 10px auto;
-  background-color: seagreen;
-  width: 200px;
-  height: 200px;
+  margin: 50px auto;
+  background-color: #dbccc5;
+  width: 160px;
+  height: 160px;
   position: relative;
-  overflow-wrap: normal;
+  padding: 20px;
+  font-size: 20px;
+  box-shadow: 5px 5px 10px rgb(143, 143, 143);
 }
 div button {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: inherit;
+  width: 100%;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  width: 73px;
+  height: 24px;
+  left: 65px;
+  top: -10px;
+
+  background: #efefed;
+  opacity: 0.8;
 }
