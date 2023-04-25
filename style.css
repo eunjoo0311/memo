@@ -24,6 +24,13 @@ textarea {
   padding: 20px;
   outline: none;
 }
+#addBtn {
+  background-color: #3a2d1c;
+  color: #d1bcb7;
+  font-size: 25px;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgb(143, 143, 143);
+}
 section {
   flex-direction: column;
   margin: 20px auto;
@@ -48,9 +55,15 @@ div {
 }
 div button {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
+  bottom: 5px;
+  right: 0px;
+  width: 70px;
+  background-color: transparent;
+  border: none;
+  color: #3a2d1c;
+  text-decoration: underline;
+  text-underline-position: under;
+  border-radius: 5px;
 }
 
 div::before {
