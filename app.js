@@ -5,15 +5,6 @@ const list = document.getElementById("list");
 // localStorage에 저장된 데이터가 있는지 확인하고, 있으면 리스트를 생성
 if (localStorage.getItem("memo")) {
   list.innerHTML = localStorage.getItem("memo");
-
-  // 삭제
-  const delBtns = list.querySelectorAll("#delBtn");
-  delBtns.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      event.target.parentNode.remove();
-      localStorage.setItem("memo", list.innerHTML);
-    });
-  });
 }
 
 addBtn.addEventListener("click", function (event) {
@@ -30,4 +21,12 @@ addBtn.addEventListener("click", function (event) {
     event.target.parentNode.remove();
     localStorage.setItem("memo", list.innerHTML);
   });
+});
+
+// 삭제 기능
+list.addEventListener("click", function (event) {
+  if (event.target.id === "delBtn") {
+    event.target.parentNode.remove();
+    localStorage.setItem("memo", list.innerHTML);
+  }
 });
